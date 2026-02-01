@@ -1,23 +1,18 @@
 {
-  "name": "my-cli-tool",
+  "name": "email-cli-tool",
   "version": "0.1.0",
-  "description": "CLI to work with React Email templates",
+  "description": "CLI to send emails using React Email + Brevo",
   "bin": {
     "mycli": "dist/bin/cli.js"
   },
-  "repository": {
-     "type": "git",
-     "url": "https://github.com/Yun4g/Email_Cli_tool"
-  },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yun4g/Email_Cli_tool"
+  },
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node src/index.ts",
-    "start": "node dist/index.js",
-    "lint": "eslint .",
+    "dev": "ts-node src/bin/cli.ts",
     "prepare": "npm run build"
   },
   "dependencies": {
@@ -25,23 +20,19 @@
     "axios": "^1.13.4",
     "commander": "^14.0.3",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-emails": "^1.2.3"
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
     "@types/node": "^25.1.0",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "typescript": "^5.9.3",
-    "ts-node": "^10.9.2",
-    "eslint": "^9.0.0"
+    "ts-node": "^10.9.2"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18"
   },
-  "author": "DTECH delightvincent487@gmail.com",
+  "author": "DTECH <delightvincent487@gmail.com>",
   "license": "MIT"
 }
