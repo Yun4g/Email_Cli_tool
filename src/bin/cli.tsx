@@ -18,11 +18,16 @@ program
   .requiredOption('-t, --to <email>', 'Recipient email address')
   .requiredOption('-s, --subject <subject>', 'Email subject')
   .requiredOption('-c, --content <content>', 'Email content in HTML format')
-  .action(async (options) => {
-     const link = {
-        url: 'https://example.com/verify',
-        text: 'Verify Email'
+  .option('-f, --from <from>', 'Sender email address', process.env.EMAIL_FROM ) 
+  .option('-l, --link <link>', ' link URL', 'https://example.com/verify')
+  .option('-T, --text <text>', 'Link text', )
+     .action(async (options) => {
+      const link = {
+        url: options.link ,
+        text: options.text 
     };
+
+
     const html = await render(
       <SendEmailUi 
         heading="Welcome to Our Service"
