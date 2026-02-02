@@ -14,7 +14,6 @@ interface SendEmailUiProps {
 
 
 const SendEmailUi = ({heading, message, link, footer}: SendEmailUiProps)=> {
-
     return (
        <Html>
            <Tailwind>

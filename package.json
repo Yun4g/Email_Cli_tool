@@ -5,7 +5,6 @@
   "bin": {
     "mycli": "dist/bin/cli.js"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/Yun4g/Email_Cli_tool"

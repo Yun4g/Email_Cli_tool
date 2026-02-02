@@ -13,6 +13,7 @@ route.post('/send-email', async (req, res) => {
     if (!email) {
       return  res.status(400).send('Email is required');
     }
+    
     const link = {
         url: 'https://example.com/verify',
         text: 'Verify Email'
@@ -27,7 +28,6 @@ route.post('/send-email', async (req, res) => {
         footer="If you did not sign up for this account, please ignore this email."
       />
    );
-
      await SendEmail(email, "Welcome to Our Service", html);
     res.send('Email sent successfully');
 });

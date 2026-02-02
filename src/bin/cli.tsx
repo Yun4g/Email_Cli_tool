@@ -10,7 +10,7 @@ import SendEmailUi from '../react-email-starter/emails/SendEmail';
 dotenv.config();
 program
   .name('email-cli-tool')
-  .description('CLI tool to send emails using Brevo API')
+  .description('CLI tool to send emails using Brevo API  and react emails')
   .version('1.0.0');
 program
   .command('send-email')
@@ -18,10 +18,10 @@ program
   .requiredOption('-t, --to <email>', 'Recipient email address')
   .requiredOption('-s, --subject <subject>', 'Email subject')
   .requiredOption('-c, --content <content>', 'Email content in HTML format')
-  .option('-f, --from <from>', 'Sender email address', process.env.EMAIL_FROM ) 
+  .option('-f, --from <from>', 'Sender email address', ) 
   .option('-l, --link <link>', ' link URL', 'https://example.com/verify')
   .option('-T, --text <text>', 'Link text', )
-     .action(async (options) => {
+  .action(async (options) => {
       const link = {
         url: options.link ,
         text: options.text 
