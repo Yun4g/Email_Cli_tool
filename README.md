@@ -1,3 +1,5 @@
 This CLI solution  makes setting up for email sending integration faster and easier with no stress
 
-npm i email-cli-tool init 
+npm i email-cli-tool  
+
+

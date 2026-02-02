@@ -11,8 +11,6 @@ program
 program
   .command('send-email')
   .description('Send email with react email UI')
-
-
   program.addCommand(initCommand)
 
 program.parse();
