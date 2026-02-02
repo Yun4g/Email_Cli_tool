@@ -7,10 +7,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yun4g/Email_Cli_tool" 
+    "url": "https://github.com/Yun4g/Email_Cli_tool"
   },
   "scripts": {
-     "build": "tsc && xcopy src\\templates dist\\templates /E /I /Y",
+    "build": "tsc && xcopy src\\templates dist\\templates /E /I /Y",
     "dev": "ts-node src/bin/cli.ts",
     "prepare": "npm run build"
   },
@@ -19,15 +19,18 @@
     "axios": "^1.13.4",
     "commander": "^14.0.3",
     "dotenv": "^17.2.3",
+    "email-cli-tool": "^0.1.0",
+    "express": "^5.2.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^25.1.0",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
-    "typescript": "^5.9.3",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=18"
@@ -35,5 +38,3 @@
   "author": "DTECH <delightvincent487@gmail.com>",
   "license": "MIT"
 }
-
-

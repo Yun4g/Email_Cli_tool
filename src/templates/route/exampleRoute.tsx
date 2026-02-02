@@ -1,5 +1,5 @@
 import { render } from "@react-email/components";
-import e, { Router } from "express";
+import  { Router } from "express";
 import SendEmailUi from "../react-email-starter/emails/SendEmail";
 import SendEmail from "../lib/sendEmail";
 
