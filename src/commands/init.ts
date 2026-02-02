@@ -6,7 +6,7 @@ import path from "path";
 
 export const initCommand = new Command("init")
     .description("Initialize a new email project");
-initCommand.action(() => {
+    initCommand.action(() => {
     const cwd = process.cwd();
     // Current Working Directory  cwd Dont forget Future me
     const folderToCopy = ["lib", "react-email-starter", "route"];
@@ -18,31 +18,31 @@ initCommand.action(() => {
     });
 
     fs.copyFileSync(
-        path.join(__dirname, "../templates/env.example"),
+        path.join(__dirname, "../../src/templates/.env.example"),
         path.join(cwd, "env.example")
     )
 });
 
 
 const copyFolderRecursiveSync = (source: string, target: string) => {
-      if(!fs.existsSync(source)) {
+    if (!fs.existsSync(source)) {
         return;
-      }
+    }
 
-      fs.mkdirSync(target, { recursive: true });
+    fs.mkdirSync(target, { recursive: true });
 
-      const readEverythingOnTheSourceFolder = fs.readdirSync(source, {withFileTypes: true});
+    const readEverythingOnTheSourceFolder = fs.readdirSync(source, { withFileTypes: true });
 
-      readEverythingOnTheSourceFolder.forEach((item) => {
-          const currentSource = path.join(source, item.name);
-          const currentTarget = path.join(target, item.name);
+    readEverythingOnTheSourceFolder.forEach((item) => {
+        const currentSource = path.join(source, item.name);
+        const currentTarget = path.join(target, item.name);
 
-          if(item.isDirectory()) {
+        if (item.isDirectory()) {
             copyFolderRecursiveSync(currentSource, currentTarget);
-          } else {
+        } else {
             fs.copyFileSync(currentSource, currentTarget);
-          }
-      })
+        }
+    })
 }
 
 
