@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "CLI to send emails using React Email + Brevo",
   "bin": {
-    "mycli": "dist/bin/cli.js"
+    "DtechCli": "dist/bin/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yun4g/Email_Cli_tool"
+    "url": "https://github.com/Yun4g/Email_Cli_tool" 
   },
   "scripts": {
-    "build": "tsc",
+     "build": "tsc && xcopy src\\templates dist\\templates /E /I /Y",
     "dev": "ts-node src/bin/cli.ts",
     "prepare": "npm run build"
   },
@@ -35,3 +35,5 @@
   "author": "DTECH <delightvincent487@gmail.com>",
   "license": "MIT"
 }
+
+

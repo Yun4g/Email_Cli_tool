@@ -13,7 +13,7 @@ route.post('/send-email', async (req, res) => {
     if (!email) {
       return  res.status(400).send('Email is required');
     }
-    
+
     const link = {
         url: 'https://example.com/verify',
         text: 'Verify Email'
