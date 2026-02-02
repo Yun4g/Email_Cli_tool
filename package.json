@@ -1,6 +1,6 @@
 {
   "name": "email-cli-tool",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CLI to send emails using React Email + Brevo",
   "bin": {
     "DtechCli": "dist/bin/cli.js"
