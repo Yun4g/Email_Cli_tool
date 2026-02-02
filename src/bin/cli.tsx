@@ -9,7 +9,7 @@ program
   .version('1.0.0');
 
 program
-  .command('send-email')
+  .command('init')
   .description('Send email with react email UI')
   program.addCommand(initCommand)
 
