@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 
-const SendEmail = async (to: string, subject:  string , Html: string, BrevoAPIKey?: string) => {     
+const SendEmail = async (to: string, subject:  string , Html: string,) => {     
     try {
         await axios.post("https://api.brevo.com/v3/smtp/email",
     {
@@ -16,7 +16,7 @@ const SendEmail = async (to: string, subject:  string , Html: string, BrevoAPIKe
     },
     {
       headers: {
-        "api-key": process.env.BREVO_API_KEY! || BrevoAPIKey,
+        "api-key": process.env.BREVO_API_KEY!,
         "Content-Type": "application/json",
       },
       timeout: 10000,
